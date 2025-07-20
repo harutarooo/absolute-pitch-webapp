@@ -5,11 +5,9 @@ import ResultPage from './pages/ResultPage';
 import StatsPage from './pages/StatsPage';
 import { isCorrect } from './utils/noteUtils';
 import { playSound, stopSound } from './components/SoundPlayer.jsx';
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
-const notes = ['C', 'D', 'E', 'F', 'G', 'A', 'B'];
+const notes = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];
 
 function getRandomNote() {
   return notes[Math.floor(Math.random() * notes.length)];
