@@ -37,22 +37,22 @@ export function stopSound() {
     try {
       oscillator.stop();
       oscillator.disconnect();
-    } catch (e) {}
+    } catch (e) { }
     oscillator = null;
   }
   if (gainNode) {
     try {
       gainNode.disconnect();
-    } catch (e) {}
+    } catch (e) { }
     gainNode = null;
   }
   if (audioCtx && audioCtx.state !== 'closed') {
     try {
       audioCtx.close();
-    } catch (e) {}
+    } catch (e) { }
     audioCtx = null;
   }
-
+}
 
 // ダミーコンポーネント（UIなし）
 const SoundPlayer = () => null;
