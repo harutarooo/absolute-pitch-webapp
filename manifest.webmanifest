@@ -1,16 +1,1 @@
-{
-  "name": "絶対音感トレーニング",
-  "short_name": "絶対音感",
-  "start_url": ".",
-  "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#1976d2",
-  "description": "絶対音感トレーニングWebアプリ",
-  "icons": [
-    {
-      "src": "/absolute-pitch-webapp/icon-1024.png",
-      "sizes": "1024x1024",
-      "type": "image/png"
-    }
-  ]
-}
+{"name":"絶対音感トレーニング","short_name":"絶対音感","description":"絶対音感トレーニングWebアプリ","start_url":".","display":"standalone","background_color":"#ffffff","theme_color":"#1976d2","lang":"en","scope":"/absolute-pitch-webapp/","icons":[{"src":"/absolute-pitch-webapp/icon-1024.png","sizes":"192x192 512x512 1024x1024","type":"image/png"}]}
