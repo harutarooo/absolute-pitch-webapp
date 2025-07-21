@@ -5,11 +5,26 @@ const notes = [
 ];
 
 const NoteButtons = ({ onSelect }) => (
-  <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '1rem', marginTop: '2rem' }}>
+  <div style={{
+    display: 'flex',
+    justifyContent: 'center',
+    flexWrap: 'wrap',
+    gap: '1rem',
+    marginTop: '2rem'
+  }}>
     {notes.map(note => (
       <button
         key={note}
-        style={{ fontSize: '1.5rem', padding: '1rem 2rem', minWidth: '80px' }}
+        style={{
+          width: '80px',
+          height: '80px',
+          borderRadius: '50%',
+          fontSize: '1.5rem',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          cursor: 'pointer',
+        }}
         onClick={() => onSelect(note)}
       >
         {note}
