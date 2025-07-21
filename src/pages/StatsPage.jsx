@@ -23,7 +23,6 @@ const StatsPage = ({ stats, onBack }) => {
   const perNoteStats = useMemo(() => getPerNoteStats(), []);
   return (
     <div style={{ textAlign: 'center', paddingTop: '2rem' }}>
-      <h3 style={{ marginTop: '2rem' }}>音ごとの正解率</h3>
       <table style={{ margin: '0 auto', borderCollapse: 'collapse' }}>
         <thead>
           <tr>
