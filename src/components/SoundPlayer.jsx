@@ -14,10 +14,10 @@ export function playSound(note) {
   oscillator.frequency.value = freq;
   // 音量調整: 高音ほど音量を下げる
   gainNode = audioCtx.createGain();
-  // 65Hz～3951Hzの範囲を想定し、対数的に減衰（例: 65Hzで1.0, 3951Hzで0.2程度）
+  // 65Hz～3951Hzの範囲を想定し、対数的に強めに減衰（例: 65Hzで1.0, 3951Hzで0.08程度）
   let volume = 1.0;
   if (freq > 65) {
-    volume = Math.max(0.2, 1.0 - Math.log2(freq / 65) * 0.15); // 調整可
+    volume = Math.max(0.08, 1.0 - Math.log2(freq / 65) * 0.2); // 減衰係数を強め
   }
   gainNode.gain.value = volume;
   oscillator.connect(gainNode);
