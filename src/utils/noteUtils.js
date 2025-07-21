@@ -19,5 +19,6 @@ export function getFrequency(note) {
 }
 
 export function isCorrect(selected, answer) {
-  return selected[0] === answer[0];
+  // 完全一致のみ正解
+  return selected === answer;
 }
