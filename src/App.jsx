@@ -56,6 +56,21 @@ function App() {
     });
     if (!ok) setMistakeNotes([...mistakeNotes, currentNote]);
     if (ok) setCorrectCount(correctCount + 1);
+
+    // localStorageに記録
+    try {
+      const key = 'answerHistory';
+      const prev = JSON.parse(localStorage.getItem(key) || '[]');
+      prev.push({
+        input: note,
+        correct: currentNote,
+        date: new Date().toISOString(),
+      });
+      localStorage.setItem(key, JSON.stringify(prev));
+    } catch (e) {
+      // エラー時は何もしない
+    }
+
     setPage('result');
   };
 
