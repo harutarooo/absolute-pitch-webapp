@@ -24,6 +24,7 @@ const ResultPage = ({ result, correctNote, onRestart, onExit, onStats }) => {
     >
       <h1 style={{ color: result === 'OK' ? 'blue' : 'red' }}>{result}</h1>
       <div>正解: {correctNote}</div>
+      <div style={{ marginTop: '1rem', fontSize: '0.9rem', color: '#888' }}>画面をタップして次の問題へ</div>
       <button
         onClick={onExit}
         style={{ position: 'fixed', left: 10, bottom: 10, zIndex: 2 }}
