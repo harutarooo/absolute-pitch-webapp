@@ -43,6 +43,19 @@ const StatsPage = ({ stats, onBack }) => {
               </tr>
             );
           })}
+          {/* 合計行 */}
+          {(() => {
+            const totalCount = notes.reduce((sum, n) => sum + perNoteStats[n].total, 0);
+            const totalCorrect = notes.reduce((sum, n) => sum + perNoteStats[n].correct, 0);
+            const totalRate = totalCount > 0 ? Math.round((totalCorrect / totalCount) * 100) : '-';
+            return (
+              <tr style={{ fontWeight: 'bold' }}>
+                <td style={{ border: '1px solid #ccc', padding: '0.3rem 0.7rem' }}>合計</td>
+                <td style={{ border: '1px solid #ccc', padding: '0.3rem 0.7rem' }}>{totalRate === '-' ? '-' : totalRate + '%'}</td>
+                <td style={{ border: '1px solid #ccc', padding: '0.3rem 0.7rem' }}>{totalCount}</td>
+              </tr>
+            );
+          })()}
         </tbody>
       </table>
       <button onClick={onBack} style={{ marginTop: '2rem' }}>戻る</button>
