@@ -20,8 +20,8 @@ const NoteButtons = ({ onSelect }) => {
             <PressableButton
               key={note}
               style={{
-                width: '80px',
-                height: '80px',
+                width: '85px',
+                height: '85px',
                 borderRadius: '50%',
                 fontSize: '1.5rem',
                 display: 'flex',
