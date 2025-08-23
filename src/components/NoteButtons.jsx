@@ -1,4 +1,3 @@
-
 import React, { useRef } from 'react';
 
 const notes = [
@@ -47,6 +46,9 @@ const NoteButtons = ({ onSelect }) => {
               onMouseDown={() => handleMouseDown(note)}
               onMouseUp={() => handleMouseUp(note)}
               onMouseLeave={handleMouseLeave}
+              onTouchStart={() => handleMouseDown(note)} // タッチ開始をマウスダウンに対応
+              onTouchEnd={() => handleMouseUp(note)}    // タッチ終了をマウスアップに対応
+              onTouchCancel={handleMouseLeave}         // タッチキャンセルをマウスリーブに対応
             >
               {note}
             </button>
