@@ -22,7 +22,7 @@ const ResultPage = ({ result, correctNote, onRestart, onExit, onStats }) => {
       }}
       onClick={handleBgClick}
     >
-      <h2 style={{ color: result === 'OK' ? 'blue' : 'red' }}>{result}</h2>
+      <h1 style={{ color: result === 'OK' ? 'blue' : 'red' }}>{result}</h1>
       <div>正解: {correctNote}</div>
       <button
         onClick={onExit}

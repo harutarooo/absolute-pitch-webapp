@@ -50,7 +50,7 @@ const StatsPage = ({ stats, onBack }) => {
             const totalRate = totalCount > 0 ? Math.round((totalCorrect / totalCount) * 100) : '-';
             return (
               <tr style={{ fontWeight: 'bold' }}>
-                <td style={{ border: '1px solid #ccc', padding: '0.3rem 0.7rem' }}>合計</td>
+                <td style={{ border: '1px solid #ccc', padding: '0.3rem 0.7rem' }}>Sum</td>
                 <td style={{ border: '1px solid #ccc', padding: '0.3rem 0.7rem' }}>{totalRate === '-' ? '-' : totalRate + '%'}</td>
                 <td style={{ border: '1px solid #ccc', padding: '0.3rem 0.7rem' }}>{totalCount}</td>
               </tr>
