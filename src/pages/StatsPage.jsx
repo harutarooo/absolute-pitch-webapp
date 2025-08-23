@@ -22,7 +22,7 @@ function getPerNoteStats() {
 const StatsPage = ({ stats, onBack }) => {
   const perNoteStats = useMemo(() => getPerNoteStats(), []);
   return (
-    <div style={{ textAlign: 'center', paddingTop: '2rem' }}>
+    <div style={{ textAlign: 'center', marginTop: '3rem', marginBottom: '1rem' }}>
       <table style={{ margin: '0 auto', borderCollapse: 'collapse' }}>
         <thead>
           <tr>
@@ -58,7 +58,7 @@ const StatsPage = ({ stats, onBack }) => {
           })()}
         </tbody>
       </table>
-      <button onClick={onBack} style={{ marginTop: '2rem' }}>戻る</button>
+      <button onClick={onBack} style={{ marginTop: '1.5rem' }}>戻る</button>
     </div>
   );
 };
