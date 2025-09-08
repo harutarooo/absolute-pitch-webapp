@@ -6,19 +6,20 @@ const ResultPage = ({ result, correctNote, onRestart, onExit, onStats }) => {
     // 統計・終了ボタンは除外
     if (e.target.dataset && (e.target.dataset.btn === 'exit' || e.target.dataset.btn === 'stats')) return;
     onRestart();
-  };
+  }; 
   return (
     <div
       style={{
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'center',
+        justifyContent: 'flex-start',
         alignItems: 'center',
         textAlign: 'center',
         height: '100vh',
         width: '100%',
         position: 'relative',
         margin : '0 auto',
+        paddingTop: '10vh',
       }}
       onClick={handleBgClick}
     >
